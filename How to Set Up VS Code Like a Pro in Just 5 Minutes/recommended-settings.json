@@ -1,0 +1,35 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code SemiBold, Consolas, 'Courier New', monospace",
+  "editor.fontSize": 20,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.tabSize": 2,
+  "prettier.requireConfig": false,
+  "prettier.semi": false,
+  "editor.codeActionsOnSave": { "source.fixAll": true },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "eslint.alwaysShowStatus": true,
+  "html.format.enable": false,
+  "htmlhint.enable": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "workbench.colorTheme": "Monokai Vibrant",
+  "workbench.iconTheme": "vscode-icons",
+  "rainbowTags.allowEverywhere": true,
+  "emmet.triggerExpansionOnTab": true,
+  "javascript.implicitProjectConfig.checkJs": true
+}
