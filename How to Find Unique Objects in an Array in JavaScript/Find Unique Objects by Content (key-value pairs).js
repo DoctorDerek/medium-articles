@@ -1,23 +1,28 @@
-const myObject2 = { hello: "🌞" }
-const objectsArray2 = [{ hello: "🌞" }, { hello: "🌞" }]
-const objectsJSON = objectsArray2.map((object) => JSON.stringify(object))
-const objectsSet2 = new Set(objectsJSON)
-const uniqueObjectsArray2 = Array.from(objectsSet2).map((object) =>
-  JSON.parse(object)
-)
+// We can get Set to compare objects' key-value pairs using JSON
+const duplicates = [{ hello: "🌞" }, { hello: "🌞" }]
+const objectsJSON = duplicates.map((object) => JSON.stringify(object))
+const objectsJSONSet = new Set(objectsJSON)
+const uniqueJSONArray = Array.from(objectsJSONSet)
 // Equivalent to: (using the spread operator)
-// const uniqueObjectsArray = [...objectsSet]
+// const uniqueJSONArray = [...objectsJSONSet]
+const uniqueObjectsByContent = uniqueJSONArray.map((string) =>
+  JSON.parse(string)
+)
 
-console.log(objectsArray2)
+console.log(duplicates)
+// Output: [ { hello: "🌞" }, { hello: "🌞" } ]
+console.log(uniqueObjectsByContent)
+// Output: [ { hello: "🌞" } ]
+
+// Compare the behavior of the JSON-stringified objects with the
+// default behavior of Set, which compares object references:
+console.log([...new Set(duplicates)])
 // Output: [ { hello: "🌞" }, { hello: "🌞" } ]
 
-console.log(uniqueObjectsArray2)
+// One-liner to compare objects by content (their key-value pairs):
+console.log(
+  Array.from(
+    new Set(duplicates.map((object) => JSON.stringify(object)))
+  ).map((string) => JSON.parse(string))
+)
 // Output: [ { hello: "🌞" } ]
-
-// One-liner:
-console.log([...new Set([myObject2, myObject2])])
-// Output: [ { hello: "🌞" } ]
-
-// Compare to different objects with same contents:
-console.log([...new Set([{ id: 1 }, { id: 1 }])])
-// Output: [ { id: 1 }, { id: 1 } ]

@@ -1,14 +1,15 @@
+// By default, Set compares JS object references
 const myObject = { hello: "🌞" }
 const objectsArray = [myObject, myObject]
 const objectsSet = new Set(objectsArray)
-const uniqueObjectsArray = Array.from(objectsSet)
+const uniqueObjectReferences = Array.from(objectsSet)
 // Equivalent to: (using the spread operator)
-// const uniqueObjectsArray = [...objectsSet]
+// const uniqueObjectReferences = [...objectsSet]
 
 console.log(objectsArray)
 // Output: [ { hello: "🌞" }, { hello: "🌞" } ]
 
-console.log(uniqueObjectsArray)
+console.log(uniqueObjectReferences)
 // Output: [ { hello: "🌞" } ]
 
 // One-liner:
