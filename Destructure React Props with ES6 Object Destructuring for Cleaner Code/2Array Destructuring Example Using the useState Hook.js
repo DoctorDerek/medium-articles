@@ -5,5 +5,5 @@ const [name, setName] = useState("Stanny Staunton")
 const arrayFromUseState = useState("Stanny Staunton")
 const nameInState = arrayFromUseState[0]
 const setNameInState = arrayFromUseState[1]
-// equivalent to:
+// The above code is equivalent to:
 const [name2, setName2] = arrayFromUseState

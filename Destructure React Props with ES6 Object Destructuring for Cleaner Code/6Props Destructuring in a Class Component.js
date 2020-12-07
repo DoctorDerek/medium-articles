@@ -4,6 +4,7 @@ export default class EmojifyComponent extends Component {
   constructor(props) {
     super(props)
   }
+
   render(props) {
     const { name, emoji } = props
     return (
