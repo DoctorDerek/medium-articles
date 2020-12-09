@@ -5,8 +5,8 @@ export default class EmojifyComponent extends Component {
     super(props)
   }
 
-  render(props) {
-    const { name, emoji } = props
+  render() {
+    const { name, emoji } = this.props
     return (
       <h1>
         {emoji} {name} {emoji}
