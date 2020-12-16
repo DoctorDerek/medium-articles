@@ -1,4 +1,10 @@
-# Technical Articles on JavaScript written by Dr. Derek Austin
+# Technical Articles on JavaScript written by Dr. Derek Austin 🥳
+
+## ~~~
+
+## Sign up for my email newsletter to get all of my Medium articles for free: [https://tinyletter.com/DoctorDerek](https://tinyletter.com/DoctorDerek)
+
+## ~~~
 
 ## Use these "Friend Links" to read all of my articles for free
 
