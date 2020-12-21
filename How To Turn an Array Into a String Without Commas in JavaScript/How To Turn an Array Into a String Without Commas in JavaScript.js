@@ -1,62 +1,65 @@
+///// Example 1 of 3 (using emoji) /////
 const string = "🍌,B,A,N,A,N,A,S"
-// .split() searches for a pattern
+// .split() searches for a separator
 const array = string.split(",")
-// Here, "," is the separator string
+// Here, "," is the separator string.
 console.log(array)
-// Output: true
+// Array(8) ["🍌","B","A","N","A","N","A","S"]
 
 // .join() is the same as .join(",")
-console.log(array.join())
+console.log(array.join()) // 🍌,B,A,N,A,N,A,S
 
-// Use the empty string "" for no commas
-console.log(array.join(""))
-// Output: true
+// Use the empty string "" for no commas.
+console.log(array.join("")) // 🍌BANANAS
 
-// You can use any separator string:
+// You can use any separator string.
 console.log(array.join("🃏"))
-// Output: [etc.]
+// 🍌🃏B🃏A🃏N🃏A🃏N🃏A🃏S
 
-// We can remake the original string
-console.log(array.join() === string)
-// Output: true
+// We can remake the original string.
+console.log(array.join() === string) // true
 
-///////////////////////////////////////
-// Here's a second example with emoji
+///// Example 2 of 3 (using emoji) /////
 const string2 = "😏,🤩,😎,😋,😉"
 const array2 = string2.split(",")
 // Here, "," is the separator string
 console.log(array2)
-// Output: true
+// Array(5) [ "😏", "🤩", "😎", "😋", "😉" ]
 
 // .join() is the same as .join(",")
-console.log(array2.join())
-// Use the empty string "" for no commas
-console.log(array2.join(""))
-// Output: true
-
+console.log(array2.join()) // 😏,🤩,😎,😋,😉
 // This is the original string
-console.log(array2.join("") === string2)
-// Output: true
+console.log(array2.join() === string2) // true
+
+// Use the empty string "" for no commas.
+console.log(array2.join("")) // 😏🤩😎😋😉
 
 // You can use any separator string:
 console.log(array2.join("🃏"))
-// Output: [etc.]
+// 😏🃏🤩🃏😎🃏😋🃏😉
 
-///////////////////////////////////////
-// Here's a third example, no emoji:
+///// Example 3 of 3 (no emoji) /////
 const string3 = "The quick brown dog"
 // Here, "" is the separator string
 const array3 = string3.split("")
+// Calling .split("") splits every character.
 console.log(array3)
-// Output: true
+// Array(19) ["T","h","e"," ","q","u","i", ...]
+
+// In comparison, .split() doesn't split at all.
+console.log(string3.split())
+// Array["The quick brown dog"]
+const string3_again = string3.split()[0]
+console.log(string3 === string3_again) // true
 
 // .join() is the same as .join(",")
 console.log(array3.join())
-// Use the empty string "" for no commas
+// Use the empty string "" for no commas.
 console.log(array3.join(""))
 // Output: true
 
-// This is the original string
+// Since we used .split(""), .join("")
+// creates the original string.
 console.log(array3.join("") === string3)
 // Output: true
 
